@@ -1,5 +1,6 @@
-import {lazy} from "react";
-import {createBrowserRouter} from "react-router-dom";
+import { lazy } from "react";
+
+import { createBrowserRouter } from "react-router-dom";
 
 const App = lazy(() => import("../pages/App"));
 const ErrorPage = lazy(() => import("../pages/ErrorPage"));

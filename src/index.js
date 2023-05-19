@@ -1,10 +1,12 @@
 import React from "react";
+
 import ReactDOM from "react-dom/client";
-import {RouterProvider} from "react-router-dom";
-import {QueryClient, QueryClientProvider} from "react-query";
-import {router} from "./routes";
-import reportWebVitals from "./reportWebVitals";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { RouterProvider } from "react-router-dom";
+
 import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { router } from "./routes";
 
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));

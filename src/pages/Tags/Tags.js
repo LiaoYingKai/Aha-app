@@ -1,14 +1,16 @@
-import {useCallback} from "react";
-import {useTags} from "./providers/TagsProvider";
+import { useCallback } from "react";
+
 import LoadingItem from "../../components/LoadingItem";
-import TagContainer from "./components/TagContainer";
 import Tag from "./components/Tag";
+import TagContainer from "./components/TagContainer";
+
+import { useTags } from "./providers/TagsProvider";
 
 const skeletonCount = 10;
 const skeletons = new Array(skeletonCount).fill(true);
 
 export default function Tags() {
-  const {data, isLoading, isError} = useTags();
+  const { data, isLoading, isError } = useTags();
 
   const renderContent = useCallback(() => {
     if (isLoading) {
@@ -32,7 +34,7 @@ export default function Tags() {
 
     return (
       <TagContainer>
-        {data.map(({id, name, count}) => (
+        {data.map(({ id, name, count }) => (
           <Tag key={id} name={name} count={count} />
         ))}
       </TagContainer>
@@ -41,7 +43,6 @@ export default function Tags() {
 
   return (
     <>
-      
       <div className="mx-auto mt-5 w-full max-w-[890px] px-5 pb-5 text-white md:mt-20">
         <h1 className="mb-6 text-3xl tracking-[.25px]">Tags</h1>
         {renderContent()}

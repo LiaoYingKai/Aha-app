@@ -1,5 +1,6 @@
+import { TagsProvider } from "./providers/TagsProvider";
+
 import Tags from "./Tags";
-import {TagsProvider} from "./providers/TagsProvider";
 
 export default function Root() {
   return (
