@@ -16,7 +16,7 @@ export default function Layout({ children }) {
     <main className="flex h-full w-full flex-col bg-black md:flex-row">
       <Nav isHiddenNav={isHiddenNav}></Nav>
       {isHiddenNav && (
-        <Link className="flex h-[70px] w-full items-center gap-5 px-6 text-white md:hidden" to="/">
+        <Link className="flex h-[70px] w-full items-center gap-5 px-6 md:hidden" to="/">
           <IconArrow />
           <p className="text-2xl leading-9 ">Home page</p>
         </Link>

@@ -4,7 +4,7 @@ export default function ErrorPage() {
   const error = useRouteError();
 
   return (
-    <section className="flex h-full w-full flex-col items-center justify-center gap-10 bg-black px-5 text-white">
+    <section className="flex h-full w-full flex-col items-center justify-center gap-10 bg-black px-5">
       <h1 className="text-6xl">Oops!</h1>
       <p className="text-lg">Sorry, an unexpected error has occurred.</p>
       <p className="text-gray-300">

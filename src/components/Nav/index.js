@@ -24,7 +24,7 @@ export default function Nav({ isHiddenNav }) {
   return (
     <nav
       className={cx(
-        "order-2 flex h-16 w-full flex-row items-center justify-center gap-10 bg-light-black text-white md:order-1 md:h-full md:w-20 md:flex-col md:justify-start md:gap-0 md:pt-9",
+        "order-2 flex h-16 w-full flex-row items-center justify-center gap-10 bg-light-black md:order-1 md:h-full md:w-20 md:flex-col md:justify-start md:gap-0 md:pt-9",
         { hidden: isHiddenNav }
       )}
     >

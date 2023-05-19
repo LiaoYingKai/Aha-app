@@ -1,5 +1,14 @@
-import {Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
+
+import Follow from "../../containers/Follow";
 
 export default function Home() {
-  return <Outlet></Outlet>;
+  return (
+    <div className="flex h-full">
+      <div className="flex-1">
+      <Outlet></Outlet>
+      </div>
+      <Follow />
+    </div>
+  );
 }

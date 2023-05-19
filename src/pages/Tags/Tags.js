@@ -42,11 +42,9 @@ export default function Tags() {
   }, [isLoading, isError, data]);
 
   return (
-    <>
-      <div className="mx-auto mt-5 w-full max-w-[890px] px-5 pb-5 text-white md:mt-20">
-        <h1 className="mb-6 text-3xl tracking-[.25px]">Tags</h1>
-        {renderContent()}
-      </div>
-    </>
+    <div className="mx-auto mt-5 w-full max-w-[890px] px-5 pb-5 md:mt-20">
+      <h1 className="mb-6 text-3xl tracking-[.25px]">Tags</h1>
+      {renderContent()}
+    </div>
   );
 }
