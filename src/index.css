@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   html {
     font-family: Ubuntu, sans-serif;
@@ -14,4 +13,13 @@ body,
 #root {
   width: 100%;
   height: 100%;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

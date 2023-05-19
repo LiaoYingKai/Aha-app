@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         'light-black': '#1B1B1B',
         'light-gray': '#8A8A8F'
+      },
+      fontSize: {
+        'text-3xl': ["30px", '45px']
       }
     },
   },
