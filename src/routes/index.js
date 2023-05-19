@@ -1,10 +1,12 @@
-import App from "../pages/App";
-import ErrorPage from "../pages/ErrorPage";
-import Home from "../pages/Home";
-import Search from "../pages/Home/Search";
-import Result from "../pages/Home/Result";
-import Tags from "../pages/Tags";
+import {lazy} from "react";
 import {createBrowserRouter} from "react-router-dom";
+
+const App = lazy(() => import("../pages/App"));
+const ErrorPage = lazy(() => import("../pages/ErrorPage"));
+const Home = lazy(() => import("../pages/Home"));
+const Search = lazy(() => import("../pages/Home/Search"));
+const Result = lazy(() => import("../pages/Home/Result"));
+const Tags = lazy(() => import("../pages/Tags"));
 
 export const router = createBrowserRouter([
   {
@@ -24,7 +26,7 @@ export const router = createBrowserRouter([
             path: "result",
             element: <Result />,
           },
-        ]
+        ],
       },
       {
         path: "tags",
