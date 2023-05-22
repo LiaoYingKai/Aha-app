@@ -4,7 +4,6 @@ import { useQuery } from "react-query";
 
 import { getTags } from "../../../apis/tags";
 
-const staleTime = 60 * 1000;
 const context = createContext(undefined);
 
 export function useTags() {
@@ -18,9 +17,7 @@ export function useTags() {
 }
 
 export function TagsProvider({ children }) {
-  const { data, isLoading, isError } = useQuery(["tags"], getTags, {
-    staleTime,
-  });
+  const { data, isLoading, isError } = useQuery(["tags"], getTags);
 
   const contextData = useMemo(() => {
     return { data, isLoading, isError };

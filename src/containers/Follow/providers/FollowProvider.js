@@ -4,7 +4,6 @@ import { useQuery } from "react-query";
 
 import { getFollower, getFollowing } from "../../../apis/follow";
 
-const staleTime = 60000 * 1000;
 const context = createContext(undefined);
 
 export const TabOption = [
@@ -31,13 +30,9 @@ export function useFollow() {
 export function FollowProvider({ children }) {
   const [currentTab, setCurrentTab] = useState(TabOption[0].value);
 
-  const followerQuery = useQuery(["follower"], getFollower, {
-    staleTime,
-  });
+  const followerQuery = useQuery(["follower"], getFollower);
 
-  const followingQuery = useQuery(["following"], getFollowing, {
-    staleTime,
-  });
+  const followingQuery = useQuery(["following"], getFollowing);
 
   const contextData = useMemo(() => {
     return { currentTab, setCurrentTab, followerQuery, followingQuery };

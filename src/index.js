@@ -8,7 +8,15 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { router } from "./routes";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: Infinity,
+      cacheTime: Infinity,
+      refetchOnWindowFocus: false
+    }
+  }
+});
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
