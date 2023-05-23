@@ -38,14 +38,14 @@ export function FollowProvider({ children }) {
   const followerQuery = useInfiniteQuery(["follower"], ({ pageParam = 1 }) => getFollower({ page: pageParam, pageSize: 10 }), {
     enabled: false,
     getNextPageParam: (lastPage) => {
-      return lastPage.page + 1 < lastPage.totalPages ? lastPage.page + 1 : undefined;
+      return lastPage.page + 1 <= lastPage.totalPages ? lastPage.page + 1 : undefined;
     },
   });
 
   const followingQuery = useInfiniteQuery(["following"], ({ pageParam = 1 }) => getFollowing({ page: pageParam, pageSize: 10 }), {
     enabled: false,
     getNextPageParam: (lastPage) => {
-      return lastPage.page + 1 < lastPage.totalPages ? lastPage.page + 1 : undefined;
+      return lastPage.page + 1 <= lastPage.totalPages ? lastPage.page + 1 : undefined;
     },
   });
 

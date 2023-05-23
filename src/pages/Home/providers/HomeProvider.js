@@ -60,7 +60,7 @@ export function HomeProvider({ children }) {
     {
       enabled: false,
       getNextPageParam: (lastPage) => {
-        return lastPage.page + 1 < lastPage.totalPages ? lastPage.page + 1 : undefined;
+        return lastPage.page + 1 <= lastPage.totalPages ? lastPage.page + 1 : undefined;
       },
     }
   );
