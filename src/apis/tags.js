@@ -1,1 +1,7 @@
-export const getTags = () => fetch("https://avl-frontend-exam.herokuapp.com/api/tags").then((res) => res.json());
+import http from "./index";
+
+export const getTags = () =>
+  http({
+    method: "GET",
+    url: "tags",
+  }).then((response) => response);

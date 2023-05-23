@@ -1,2 +1,21 @@
-export const getFollower = () => fetch("https://avl-frontend-exam.herokuapp.com/api/users/all?page=1&pageSize=10").then((res) => res.json());
-export const getFollowing = () => fetch("https://avl-frontend-exam.herokuapp.com/api/users/friends?page=1&pageSize=10").then((res) => res.json());
+import http from "./index";
+
+export const getFollower = ({ page = 1, pageSize = 10 } = {}) =>
+  http({
+    method: "GET",
+    url: "users/all",
+    params: {
+      page,
+      pageSize,
+    },
+  }).then((response) => response);
+
+export const getFollowing = ({ page = 1, pageSize = 10 } = {}) =>
+  http({
+    method: "GET",
+    url: "users/friends",
+    params: {
+      page,
+      pageSize,
+    },
+  }).then((response) => response);
