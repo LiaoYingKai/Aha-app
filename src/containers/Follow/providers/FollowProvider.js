@@ -1,19 +1,24 @@
-import React, { createContext, useContext, useMemo, useStaet, useState } from "react";
+import React, { createContext, useContext, useMemo, useState } from "react";
 
-import { useQuery } from "react-query";
+import { useInfiniteQuery } from "react-query";
 
 import { getFollower, getFollowing } from "../../../apis/follow";
 
 const context = createContext(undefined);
 
+export const TabEnum = {
+  FOLLOWERS: "followers",
+  FOLLOWING: "following",
+};
+
 export const TabOption = [
   {
     label: "Followers",
-    value: "followers",
+    value: TabEnum.FOLLOWERS,
   },
   {
     label: "Following",
-    value: "following",
+    value: TabEnum.FOLLOWING,
   },
 ];
 
@@ -30,9 +35,19 @@ export function useFollow() {
 export function FollowProvider({ children }) {
   const [currentTab, setCurrentTab] = useState(TabOption[0].value);
 
-  const followerQuery = useQuery(["follower"], getFollower);
+  const followerQuery = useInfiniteQuery(["follower"], ({ pageParam = 1 }) => getFollower({ page: pageParam, pageSize: 10 }), {
+    enabled: false,
+    getNextPageParam: (lastPage) => {
+      return lastPage.page + 1 < lastPage.totalPages ? lastPage.page + 1 : undefined;
+    },
+  });
 
-  const followingQuery = useQuery(["following"], getFollowing);
+  const followingQuery = useInfiniteQuery(["following"], ({ pageParam = 1 }) => getFollowing({ page: pageParam, pageSize: 10 }), {
+    enabled: false,
+    getNextPageParam: (lastPage) => {
+      return lastPage.page + 1 < lastPage.totalPages ? lastPage.page + 1 : undefined;
+    },
+  });
 
   const contextData = useMemo(() => {
     return { currentTab, setCurrentTab, followerQuery, followingQuery };

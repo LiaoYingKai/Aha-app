@@ -6,6 +6,8 @@ import { useDebounce, useSetState } from "react-use";
 
 import { getResult } from "../../../apis/home";
 
+import { getInfiniteData } from "../../../utils/data";
+
 const context = createContext(undefined);
 
 export function useHome() {
@@ -63,30 +65,7 @@ export function HomeProvider({ children }) {
     }
   );
 
-  const listData = useMemo(() => {
-    return (
-      data?.pages?.reduce((acc, item) => {
-        acc.push(...item.data);
-        return acc;
-      }, []) || []
-    );
-  }, [data]);
-
-  const pages = useMemo(() => {
-    const defaultPages = {
-      total: 0,
-      totalPages: 0,
-      page: 0,
-      pageSize: 0,
-    };
-    if (!data) return defaultPages;
-    defaultPages.total = data.pages[0].total;
-    defaultPages.totalPages = data.pages[0].totalPages;
-    defaultPages.page = data.pages[0].page;
-    defaultPages.pageSize = data.pages[0].pageSize;
-    return defaultPages;
-  }, [data]);
-
+  const { list, pages } = useMemo(() => getInfiniteData(data), [data]);
   const [isReady] = useDebounce(
     () => {
       remove();
@@ -99,7 +78,7 @@ export function HomeProvider({ children }) {
   const contextData = useMemo(() => {
     return {
       isReady: isReady(),
-      data: listData,
+      data: list,
       pages: pages,
       isLoading,
       isFetchingNextPage,
@@ -112,7 +91,7 @@ export function HomeProvider({ children }) {
     };
   }, [
     isReady,
-    listData,
+    list,
     pages,
     isLoading,
     isFetchingNextPage,

@@ -1,35 +1,29 @@
-import { useCallback, useMemo } from "react";
+import { useEffect, useMemo } from "react";
 
-import FollowItem from "./components/FollowItem";
-import FollowLoadingItem from "./components/FollowLoadingItem";
+import Follower from "./components/Follower";
+import Following from "./components/Following";
 import Tabs from "./components/Tabs";
 
-import { useFollow } from "./providers/FollowProvider";
+import { TabEnum, useFollow } from "./providers/FollowProvider";
 
 export default function Follow() {
-  const { followerQuery, followingQuery, currentTab } = useFollow();
-  const data = useMemo(() => {
-    if (followerQuery.isLoading || followingQuery.isLoading) {
-      return new Array(10).fill(true);
-    }
-    if (currentTab === "followers") {
-      return followerQuery.data.data;
-    } else {
-      return followingQuery.data.data;
-    }
-  }, [currentTab, followerQuery, followingQuery]);
+  const { currentTab, followerQuery, followingQuery } = useFollow();
+  const isFollower = useMemo(() => currentTab === TabEnum.FOLLOWERS, [currentTab]);
 
-  const renderContent = useCallback(() => {
-    if (followerQuery.isLoading || followingQuery.isLoading) {
-      return data.map((_, index) => <FollowLoadingItem key={index} />);
+  useEffect(() => {
+    if (isFollower) {
+      followerQuery.remove();
+      followerQuery.refetch();
+    } else {
+      followingQuery.remove();
+      followingQuery.refetch();
     }
-    return data.map((item) => <FollowItem key={item.id} {...item} />);
-  }, [data, followerQuery, followingQuery]);
+  }, [isFollower]);
 
   return (
     <div className="scroll-hidden hidden h-full w-[375px] overflow-y-scroll bg-light-black pt-5 2xl:block">
       <Tabs />
-      <div className="px-4">{renderContent()}</div>
+      {isFollower ? <Follower /> : <Following />}
     </div>
   );
 }
