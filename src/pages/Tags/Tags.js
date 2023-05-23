@@ -43,7 +43,7 @@ export default function Tags() {
 
   return (
     <div className="mx-auto mt-5 w-full max-w-[890px] px-5 pb-5 md:mt-20">
-      <h1 className="mb-6 text-3xl tracking-[.25px]">Tags</h1>
+      <h1 className="mb-6 text-2xl tracking-[.25px] md:text-3xl">Tags</h1>
       {renderContent()}
     </div>
   );
