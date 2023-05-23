@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Aha-app/static/css/main.c41b6a78.css",
+    "main.js": "/Aha-app/static/js/main.4aa98569.js",
+    "static/js/228.dbc5df92.chunk.js": "/Aha-app/static/js/228.dbc5df92.chunk.js",
+    "static/js/354.4f85c0ab.chunk.js": "/Aha-app/static/js/354.4f85c0ab.chunk.js",
+    "static/js/234.91370152.chunk.js": "/Aha-app/static/js/234.91370152.chunk.js",
+    "static/js/74.a5f081d1.chunk.js": "/Aha-app/static/js/74.a5f081d1.chunk.js",
+    "static/js/460.abd36314.chunk.js": "/Aha-app/static/js/460.abd36314.chunk.js",
+    "static/js/126.c7de09ec.chunk.js": "/Aha-app/static/js/126.c7de09ec.chunk.js",
+    "static/js/787.9d671e81.chunk.js": "/Aha-app/static/js/787.9d671e81.chunk.js",
+    "static/js/243.159a24c0.chunk.js": "/Aha-app/static/js/243.159a24c0.chunk.js",
+    "index.html": "/Aha-app/index.html",
+    "static/media/tab.svg": "/Aha-app/static/media/tab.156166788339faf30c5ea86960db57be.svg",
+    "static/media/arrow.svg": "/Aha-app/static/media/arrow.6eb0463277ee7976a337ba87b99f0a6a.svg",
+    "main.c41b6a78.css.map": "/Aha-app/static/css/main.c41b6a78.css.map",
+    "main.4aa98569.js.map": "/Aha-app/static/js/main.4aa98569.js.map",
+    "228.dbc5df92.chunk.js.map": "/Aha-app/static/js/228.dbc5df92.chunk.js.map",
+    "354.4f85c0ab.chunk.js.map": "/Aha-app/static/js/354.4f85c0ab.chunk.js.map",
+    "234.91370152.chunk.js.map": "/Aha-app/static/js/234.91370152.chunk.js.map",
+    "74.a5f081d1.chunk.js.map": "/Aha-app/static/js/74.a5f081d1.chunk.js.map",
+    "460.abd36314.chunk.js.map": "/Aha-app/static/js/460.abd36314.chunk.js.map",
+    "126.c7de09ec.chunk.js.map": "/Aha-app/static/js/126.c7de09ec.chunk.js.map",
+    "787.9d671e81.chunk.js.map": "/Aha-app/static/js/787.9d671e81.chunk.js.map",
+    "243.159a24c0.chunk.js.map": "/Aha-app/static/js/243.159a24c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c41b6a78.css",
+    "static/js/main.4aa98569.js"
+  ]
+}
