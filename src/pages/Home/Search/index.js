@@ -18,7 +18,7 @@ export default function Search() {
   }, [navigate, searchParams]);
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-[720px] flex-col px-5 pb-6 pt-14 md:pb-20">
+    <div className="mx-auto flex h-full w-full max-w-[720px] flex-col">
       <TitleBlock title="Search">
         <Input value={searchParams.keyword} onChange={handleChangeKeyword} placeholder="Keyword" />
       </TitleBlock>

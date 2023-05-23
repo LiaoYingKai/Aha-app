@@ -39,7 +39,7 @@ export default function Results() {
   }, [skeletons, isLoading, isFetchingNextPage, isError, data]);
 
   return (
-    <div className="relative mx-auto mt-5 flex w-full max-w-[720px] flex-col px-5 pb-5 md:mt-20">
+    <div className="relative mx-auto mt-5 flex w-full max-w-[720px] flex-col">
       <Link className="absolute -left-8 top-2 hidden md:block" to="/">
         <Icon type={Icon.Type.ARROW} />
       </Link>
