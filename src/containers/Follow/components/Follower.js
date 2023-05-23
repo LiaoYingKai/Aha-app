@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 
 import Button from "../../../components/Button";
 
@@ -14,6 +14,12 @@ export default function Follower() {
   const { followerQuery } = useFollow();
   const { list } = useMemo(() => getInfiniteData(followerQuery.data), [followerQuery.data]);
   const skeletons = useMemo(() => getArray(), []);
+
+  useEffect(() => {
+    followerQuery.remove();
+    followerQuery.refetch()
+  }, [])
+
   if (followerQuery.isError) {
     return (
       <div>
@@ -22,6 +28,7 @@ export default function Follower() {
       </div>
     );
   }
+
 
   return (
     <div className="px-4 pb-5">
