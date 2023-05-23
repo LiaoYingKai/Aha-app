@@ -1,14 +1,11 @@
-import { Outlet } from "react-router-dom";
+import { HomeProvider } from "./providers/HomeProvider";
 
-import Follow from "../../containers/Follow";
+import Home from "./Home";
 
-export default function Home() {
+export default function Root() {
   return (
-    <div className="flex h-full">
-      <div className="flex-1">
-      <Outlet></Outlet>
-      </div>
-      <Follow />
-    </div>
+    <HomeProvider>
+      <Home />
+    </HomeProvider>
   );
 }
