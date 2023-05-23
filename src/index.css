@@ -24,3 +24,80 @@ body,
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.input-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+.input-range::-webkit-slider-runnable-track {
+  background-size: 100%;
+  height: 0.5rem;
+  border-radius: 20px;
+}
+
+.input-range-style-3::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-4::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 8%, rgba(255, 255, 255, 0.5) 8%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-5::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 17%, rgba(255, 255, 255, 0.5) 17%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-6::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 25%, rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-7::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 33%, rgba(255, 255, 255, 0.5) 33%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-8::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 41%, rgba(255, 255, 255, 0.5) 41%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-9::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-10::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 58%, rgba(255, 255, 255, 0.5) 58%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-11::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 64%, rgba(255, 255, 255, 0.5) 64%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-12::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 72%, rgba(255, 255, 255, 0.5) 72%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-13::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 81%, rgba(255, 255, 255, 0.5) 81%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-14::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 90%, rgba(255, 255, 255, 0.5) 90%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range-style-15::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to right, #ff5c01 0%, #ffd25f 100%, rgba(255, 255, 255, 0.5) 100%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -8px;
+  background-color: #1b1b1b;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 6px solid #ffd05d;
+}

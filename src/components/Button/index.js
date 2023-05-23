@@ -14,22 +14,15 @@ const { LARGE } = ButtonSize;
 
 const { CONTAINED } = ButtonType;
 
-export default function Button({ size = LARGE, type = CONTAINED, children }) {
+export default function Button({ size = LARGE, type = CONTAINED, children, onClick }) {
   const typeStyle =
     type === CONTAINED
       ? "border-[1px] border-solid border-white bg-white text-black hover:bg-transparent hover:text-white"
       : "border-[1px] border-solid border-white bg-transparent text-white hover:bg-white hover:text-black";
-  const sizeStyle = size === LARGE ? "w-full max-w-[335px] h-10 rounded text-sm" : "px-2.5 h-8 rounded-[20px] text-xs";
+  const sizeStyle = size === LARGE ? "w-full max-w-[335px] h-10 rounded text-sm font-bold" : "px-2.5 h-8 rounded-[20px] text-xs";
 
   return (
-    <button
-      type="button"
-      className={cx(
-        "flex items-center justify-center",
-        typeStyle,
-        sizeStyle
-      )}
-    >
+    <button onClick={onClick} type="button" className={cx("flex items-center justify-center", typeStyle, sizeStyle)}>
       {children}
     </button>
   );

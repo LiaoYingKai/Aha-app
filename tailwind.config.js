@@ -11,7 +11,8 @@ module.exports = {
       colors: {
         'light-black': '#1B1B1B',
         'light-gray': '#8A8A8F',
-        'text-gray': '#929292'
+        'text-gray': '#929292',
+        'focus': '#FF9B33'
       },
       fontSize: {
         'text-3xl': ["30px", '45px']
