@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import useMobileHook from "../../hooks/useMobileHook";
 
-import { ReactComponent as IconArrow } from "../../images/arrow.svg";
+import Icon from "../Icon";
 import Nav from "../Nav";
 
 export default function Layout({ children }) {
@@ -17,7 +17,7 @@ export default function Layout({ children }) {
       <Nav isHiddenNav={isHiddenNav}></Nav>
       {isHiddenNav && (
         <Link className="flex h-[70px] w-full items-center gap-5 px-6 md:hidden" to="/">
-          <IconArrow />
+          <Icon type={Icon.Type.ARROW} />
           <p className="text-2xl leading-9 ">Home page</p>
         </Link>
       )}

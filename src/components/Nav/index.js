@@ -4,7 +4,7 @@ import cx from "classnames";
 import { NavLink } from "react-router-dom";
 
 import Logo from "../../images/logo.png";
-import { ReactComponent as IconTab } from "../../images/tab.svg";
+import Icon from "../Icon";
 
 export default function Nav({ isHiddenNav }) {
   const links = useMemo(
@@ -38,7 +38,7 @@ export default function Nav({ isHiddenNav }) {
                 "text-light-gray": !isActive,
               })}
             >
-              <IconTab className="inline-block" />
+              <Icon type={Icon.Type.TAB} />
               <p
                 className={cx("hidden capitalize md:block", {
                   visible: isActive,
