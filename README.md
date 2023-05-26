@@ -32,3 +32,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `local env`
 
 Please add REACT_APP_API_ENDPOINT that value from [Front-End Exam](https://docs.google.com/document/d/1OfUtksOOGix-W81D6URAAtPOhabH_mcLEHEq5qZGMlg/edit) in .env.local.
+```env.local
+REACT_APP_API_ENDPOINT=API_PATH
+```
